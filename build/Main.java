@@ -6,11 +6,13 @@ public class Main {
         Shoe shoe4 = new Shoe("Puma Suede", 41, "Blue", 1800000, 4);
         Shoe shoe5 = new Shoe("Vans Old Skool", 42, "Black and White", 1700000, 6);
 
-        System.out.println(shoe1);
-        System.out.println(shoe2);
-        System.out.println(shoe3);
-        System.out.println(shoe4);
-        System.out.println(shoe5);
+        Inventory inventory = new Inventory();
+        inventory.addShoe(shoe1);
+        inventory.addShoe(shoe2);
+        inventory.addShoe(shoe3);
+        inventory.addShoe(shoe4);
+        inventory.addShoe(shoe5);
 
+        inventory.displayShoes();
     }
 }
