@@ -1,4 +1,4 @@
-public class Shoe extends Product{
+public class Shoe extends Product implements Sellable{
     private int size;
     private String color;
 
@@ -28,5 +28,15 @@ public class Shoe extends Product{
     public String toString(){
         return "Shoe[" + getName() + "," + size + "," + color + ","
         + getCost() + "," + getQty() + "]";
+    }
+
+    @Override
+    public boolean sell(int amount) {
+    if (amount <= 0 || amount > getQty()) {
+        return false;
+    }
+
+    setQty(getQty() - amount);
+    return true;
     }
 }

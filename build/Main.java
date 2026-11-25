@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Shoe shoe1 = new Shoe("Nike Air Force 1", 40, "White", 2500000, 5);
@@ -13,6 +15,18 @@ public class Main {
         inventory.addShoe(shoe4);
         inventory.addShoe(shoe5);
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter shoes name: ");
+        String shoeName = input.nextLine();
+
+        System.out.println("Enter amount: ");
+        int amount = input.nextInt();
+
+        boolean sold = inventory.sellShoe(shoeName, amount);
+        System.out.println("Sell successful: " + sold);
+
         inventory.displayShoes();
+        input.close();
     }
 }

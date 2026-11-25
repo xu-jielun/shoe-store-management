@@ -1,4 +1,4 @@
-public class Product {
+public abstract class Product {
     private String name;
     private double cost;
     private int qty;
@@ -33,6 +33,7 @@ public class Product {
         this.qty=qty;
     }
 
+    @Override 
     public String toString(){
         return "Product[" + name + "," + cost + "," + qty +"]";
     }
