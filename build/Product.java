@@ -37,4 +37,13 @@ public abstract class Product {
     public String toString(){
         return "Product[" + name + "," + cost + "," + qty +"]";
     }
+
+    public boolean addStock(int amount){
+        if (amount<=0){
+            return false;
+        }
+
+        qty += amount;
+        return true;
+    }
 }
